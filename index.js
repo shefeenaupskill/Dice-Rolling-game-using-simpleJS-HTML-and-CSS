@@ -9,7 +9,7 @@ document.getElementById('roll').onclick = () => {
     diceArray = randomGenerator(parseInt(no));
     for (let i = 0; i < diceArray.length; i++) {
         console.log('diceArray[i]-->' + diceArray[i])
-        images.push(`<img src="/images/${diceArray[i]}.svg" alt="${diceArray[i]}" height="120px" width="120px">`);
+        images.push(`<img src="/${diceArray[i]}.svg" alt="${diceArray[i]}" height="120px" width="120px">`);
     }
     document.getElementById('output-text').textContent = `Dice: ${diceArray}`;
     document.getElementById('output').innerHTML = images.join(' ');
