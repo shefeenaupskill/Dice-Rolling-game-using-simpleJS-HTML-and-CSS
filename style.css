@@ -1,0 +1,111 @@
+.container {
+    position: relative;
+    border: 5px solid black;
+    margin: 50px;
+    padding: 50px;
+    height: 500px;
+    width: 600px;
+    background-color: white;
+    position: absolute;
+    left: 25%;
+    box-shadow: 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+#nav-container {
+    display: flex;
+    justify-content: baseline;
+    font-size: 50px;
+
+
+}
+
+body {
+    background-image: url('dice-bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: cursive;
+    font-size: x-large;
+}
+
+#input-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+
+}
+
+input {
+    text-align: center;
+    font-size: large;
+}
+
+#output-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+#output {}
+
+button {
+    width: 50px;
+    height: 50px;
+    background-image: url('images/1.svg');
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+    cursor: pointer;
+
+
+}
+
+button:hover {
+    position: relative;
+
+
+    animation: roll 3s infinite linear;
+}
+
+button:active {
+    animation: none;
+}
+
+@keyframes roll {
+    0% {
+        background-image: url('/images/1.svg');
+        transform: rotateY(180deg);
+    }
+
+    16.67% {
+        background-image: url('/images/2.svg');
+        transform: rotateX(180deg);
+    }
+
+    33.33% {
+        background-image: url('/images/3.svg');
+        transform: rotateZ(180deg);
+    }
+
+    50% {
+        background-image: url('/images/4.svg');
+        transform: rotateX(180deg);
+    }
+
+    66.67% {
+        background-image: url('/images/5.svg');
+        transform: rotateY(180deg);
+    }
+
+    83.33% {
+        background-image: url('/images/6.svg');
+        transform: rotateZ(180deg);
+    }
+
+    100% {
+        background-image: url('/images/1.svg');
+        transform: rotateX(180deg);
+    }
+
+}
